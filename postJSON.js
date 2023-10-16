@@ -1,4 +1,3 @@
- 
     async function formSend() {
     const formData = document.querySelector('form')
     formData.addEventListener ('submit', function formSend(InfosdeEvento){
@@ -26,9 +25,9 @@
             }),
         }) .then(result => {
             console.log("Sucess:", result);
+            alert ('Parabéns seu intercâmbio já está próximo!')
         });
     } catch (error) {
         console.error("Error:", error)
     }
 }
-
