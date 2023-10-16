@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "style2.css">
+        <script type="text/javascript" src="postJSON.js"></script>
+        <title> Ex002 - HTML Estático </title>
+    </head>
+    <body>
+        <form>
+            <h1><i>Formulário </i></h1>
+            <ul>
+                <li> 
+                    <label for="nameFull"> <strong>Nome: </strong></label>
+                    <input type="text" id="nameFull" name="nameFull"
+                    oninvalid="alert('Apenas letras! O Nome deve conter o primeiro nome e o último sobrenome.');" 
+                    pattern="[A-Za-z]+ [A-Za-z]+"
+                    autocomplete="on" placeholder="Seu primeiro nome e o seu último nome"/>
+                </li>
+                <li>
+                    <label for="sexo"> <strong>Sexo: </strong></label>
+                    <select id="sexo" name="sexo">
+                        <optgroup>
+                          <option>Masculino</option>
+                          <option>Feminino</option>
+                        </optgroup>
+                      </select>
+                </li>
+                <li>
+                    <label for="dateBirth"> <strong> Data de Nascimento: </strong> </label>
+                    <input type="date" id="dateBirth" name="dateBirth"/>
+                </li>
+                <li> 
+                    <label for="email"> <strong>E-mail: </strong></label>
+                    <input type="email" id="email" name="email"
+                    autocomplete="on" placeholder="email@email"/>
+                </li>
+                <li> 
+                    <label for="phone"><strong>Telefone: </strong> </label>
+                    <input type="tel" id="phone" name="phone" maxlength="11" minlength="11"
+                    oninvalid="alert('Apenas números são permitidos! O telefone deve ter 11 digítos contendo o DDD.');"
+                    pattern="[0-9]*" autocomplete="on" placeholder="DDD e seu telefone"/>
+                </li>
+                <li>
+                    <label for="estado"> <strong>Estado Civil: </strong></label>
+                    <select id="estado" name="estado">
+                        <optgroup>
+                          <option>Solteiro</option>
+                          <option>Casado</option>
+                          <option>Separado</option>
+                          <option>Viúvo</option>
+                        </optgroup>
+                      </select>
+                </li>
+                <li> 
+                    <input type="submit" id="send" onclick="formSend()"/> 
+                </li>
+            </ul>
+        </form>
+</html>
